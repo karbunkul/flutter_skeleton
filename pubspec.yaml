@@ -1,0 +1,17 @@
+name: flutter_skeleton
+description: A new Flutter package.
+version: 0.9.0+16
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.5"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  pedantic: ^1.11.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: any
