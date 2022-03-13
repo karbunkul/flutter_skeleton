@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:example/person_item.dart';
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton/skeleton.dart';
+import 'package:flutter_skeleton/flutter_skeleton.dart';
 
 class SkeletonDemoPage extends StatefulWidget {
   const SkeletonDemoPage({Key? key}) : super(key: key);

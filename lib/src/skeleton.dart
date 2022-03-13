@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:flutter_skeleton/flutter_skeleton.dart';
 import 'package:flutter_skeleton/src/skeleton_group.dart';
 
 class Skeleton extends StatelessWidget {
@@ -15,6 +16,11 @@ class Skeleton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final group = context.findAncestorWidgetOfExactType<SkeletonGroup>();
+    if (_drawShape(context) == false && group?.skeleton == true) {
+      return SizedBox();
+    }
+
     if (_skeleton(context)) {
       return shape;
     }
@@ -29,6 +35,10 @@ class Skeleton extends StatelessWidget {
 
     return context.findAncestorWidgetOfExactType<SkeletonGroup>()?.skeleton ??
         false;
+  }
+
+  bool _drawShape(BuildContext context) {
+    return SkeletonScope.of(context).drawShape;
   }
 
   factory Skeleton.builder({

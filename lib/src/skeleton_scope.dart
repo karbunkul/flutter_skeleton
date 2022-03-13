@@ -3,10 +3,12 @@ import 'package:flutter/widgets.dart';
 typedef SkeletonBuilder = Widget Function(BuildContext context, Widget child);
 
 class SkeletonScope extends InheritedWidget {
+  final bool drawShape;
   final SkeletonBuilder? builder;
   final SkeletonBuilder? groupBuilder;
 
   SkeletonScope({
+    required this.drawShape,
     Key? key,
     required Widget child,
     this.builder,

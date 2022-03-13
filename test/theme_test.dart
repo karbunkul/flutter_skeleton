@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton/skeleton.dart';
+import 'package:flutter_skeleton/flutter_skeleton.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

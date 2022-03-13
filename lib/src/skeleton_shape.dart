@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_skeleton/src/skeleton_manager.dart';
 import 'package:flutter_skeleton/src/skeleton_scope.dart';
-import 'package:flutter_skeleton/src/theme.dart';
+import 'package:flutter_skeleton/src/skeleton_theme.dart';
 
 class SkeletonShape extends StatelessWidget {
   final double width;

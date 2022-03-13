@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_skeleton/src/skeleton_scope.dart';
-import 'package:flutter_skeleton/src/theme.dart';
+import 'package:flutter_skeleton/src/skeleton_theme.dart';
 
 class SkeletonManager extends StatelessWidget {
   final Widget child;
@@ -8,6 +8,7 @@ class SkeletonManager extends StatelessWidget {
   final SkeletonThemeData? darkTheme;
   final SkeletonBuilder? builder;
   final SkeletonBuilder? groupBuilder;
+  final bool? drawShape;
 
   SkeletonManager({
     Key? key,
@@ -16,6 +17,7 @@ class SkeletonManager extends StatelessWidget {
     this.groupBuilder,
     this.theme,
     this.darkTheme,
+    this.drawShape,
   });
 
   @override
@@ -23,6 +25,7 @@ class SkeletonManager extends StatelessWidget {
     return SkeletonTheme(
       data: _themeData(context),
       child: SkeletonScope(
+        drawShape: drawShape ?? true,
         builder: builder,
         groupBuilder: groupBuilder,
         child: child,

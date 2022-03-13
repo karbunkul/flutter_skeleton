@@ -16,6 +16,10 @@ class SkeletonGroup extends StatelessWidget {
     final scope = SkeletonScope.maybeOf(context);
     final child = builder(context);
 
+    if (scope?.drawShape == false) {
+      return child;
+    }
+
     if (skeleton == true && scope != null && scope.groupBuilder != null) {
       return scope.groupBuilder!.call(context, child);
     }
