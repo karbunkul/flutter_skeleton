@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       builder: (_, child) {
         return SkeletonManager(
-          drawShape: true,
+          viewMode: SkeletonViewMode.auto,
           theme: SkeletonThemeData(color: Colors.grey, radius: 4),
           // darkTheme: SkeletonThemeData(color: Colors.amber, radius: 4),
           groupBuilder: (context, child) {

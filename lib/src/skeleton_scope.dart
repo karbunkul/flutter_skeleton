@@ -2,13 +2,15 @@ import 'package:flutter/widgets.dart';
 
 typedef SkeletonBuilder = Widget Function(BuildContext context, Widget child);
 
+enum SkeletonViewMode { show, hide, auto }
+
 class SkeletonScope extends InheritedWidget {
-  final bool drawShape;
   final SkeletonBuilder? builder;
   final SkeletonBuilder? groupBuilder;
+  final SkeletonViewMode viewMode;
 
   SkeletonScope({
-    required this.drawShape,
+    required this.viewMode,
     Key? key,
     required Widget child,
     this.builder,

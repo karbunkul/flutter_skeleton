@@ -17,10 +17,20 @@ class Skeleton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final group = context.findAncestorWidgetOfExactType<SkeletonGroup>();
-    if (_drawShape(context) == false && group?.skeleton == true) {
+    final scope = SkeletonScope.maybeOf(context);
+    final viewMode = scope?.viewMode ?? SkeletonViewMode.auto;
+
+    // always show shape
+    if (viewMode == SkeletonViewMode.show) {
+      return shape;
+    }
+
+    // disable skeleton shape
+    if (viewMode == SkeletonViewMode.hide && group?.skeleton == true) {
       return SizedBox();
     }
 
+    // auto logic
     if (_skeleton(context)) {
       return shape;
     }
@@ -35,10 +45,6 @@ class Skeleton extends StatelessWidget {
 
     return context.findAncestorWidgetOfExactType<SkeletonGroup>()?.skeleton ??
         false;
-  }
-
-  bool _drawShape(BuildContext context) {
-    return SkeletonScope.of(context).drawShape;
   }
 
   factory Skeleton.builder({

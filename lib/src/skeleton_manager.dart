@@ -8,7 +8,7 @@ class SkeletonManager extends StatelessWidget {
   final SkeletonThemeData? darkTheme;
   final SkeletonBuilder? builder;
   final SkeletonBuilder? groupBuilder;
-  final bool? drawShape;
+  final SkeletonViewMode? viewMode;
 
   SkeletonManager({
     Key? key,
@@ -17,7 +17,7 @@ class SkeletonManager extends StatelessWidget {
     this.groupBuilder,
     this.theme,
     this.darkTheme,
-    this.drawShape,
+    this.viewMode,
   });
 
   @override
@@ -25,7 +25,7 @@ class SkeletonManager extends StatelessWidget {
     return SkeletonTheme(
       data: _themeData(context),
       child: SkeletonScope(
-        drawShape: drawShape ?? true,
+        viewMode: viewMode ?? SkeletonViewMode.auto,
         builder: builder,
         groupBuilder: groupBuilder,
         child: child,

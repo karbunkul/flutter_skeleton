@@ -15,14 +15,17 @@ class SkeletonGroup extends StatelessWidget {
   Widget build(BuildContext context) {
     final scope = SkeletonScope.maybeOf(context);
     final child = builder(context);
+    final viewMode = scope?.viewMode ?? SkeletonViewMode.auto;
 
-    if (scope?.drawShape == false) {
-      return child;
-    }
+    switch (viewMode) {
+      case SkeletonViewMode.hide:
+        return child;
 
-    if (skeleton == true && scope != null && scope.groupBuilder != null) {
-      return scope.groupBuilder!.call(context, child);
+      default:
+        if (skeleton == true && scope != null && scope.groupBuilder != null) {
+          return scope.groupBuilder!.call(context, child);
+        }
+        return child;
     }
-    return child;
   }
 }
