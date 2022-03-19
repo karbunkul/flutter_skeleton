@@ -1,5 +1,5 @@
+import 'package:easy_skeleton/src/skeleton_shape.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_skeleton/src/skeleton_shape.dart';
 
 class SkeletonShapeText extends StatelessWidget {
   final String data;
@@ -19,7 +19,7 @@ class SkeletonShapeText extends StatelessWidget {
 
   int get _maxLines => maxLines ?? 1;
   double get _spacing => spacing ?? 4;
-  TextStyle get _style => style ?? TextStyle();
+  TextStyle get _style => style ?? const TextStyle();
 
   @override
   Widget build(BuildContext context) {

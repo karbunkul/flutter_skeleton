@@ -1,5 +1,5 @@
+import 'package:easy_skeleton/src/skeleton_scope.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_skeleton/src/skeleton_scope.dart';
 
 class SkeletonGroup extends StatelessWidget {
   final WidgetBuilder builder;

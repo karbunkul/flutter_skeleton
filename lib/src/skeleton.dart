@@ -1,6 +1,6 @@
+import 'package:easy_skeleton/src/skeleton_group.dart';
+import 'package:easy_skeleton/src/skeleton_scope.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_skeleton/flutter_skeleton.dart';
-import 'package:flutter_skeleton/src/skeleton_group.dart';
 
 class Skeleton extends StatelessWidget {
   final Widget child;
@@ -27,7 +27,7 @@ class Skeleton extends StatelessWidget {
 
     // disable skeleton shape
     if (viewMode == SkeletonViewMode.hide && group?.skeleton == true) {
-      return SizedBox();
+      return const SizedBox();
     }
 
     // auto logic

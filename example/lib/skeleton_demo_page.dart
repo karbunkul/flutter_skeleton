@@ -1,9 +1,9 @@
 import 'dart:math';
 
+import 'package:easy_skeleton/easy_skeleton.dart';
 import 'package:example/person_item.dart';
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton/flutter_skeleton.dart';
 
 class SkeletonDemoPage extends StatefulWidget {
   const SkeletonDemoPage({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class _SkeletonDemoPageState extends State<SkeletonDemoPage> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(milliseconds: 2500), () {
+    Future.delayed(const Duration(milliseconds: 2500), () {
       setState(() {
         items = List<Person>.generate(25, (index) => Person.random());
       });
@@ -30,7 +30,7 @@ class _SkeletonDemoPageState extends State<SkeletonDemoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Skeleton demo'),
+        title: const Text('Skeleton demo'),
         actions: [
           IconButton(
               onPressed: () {
@@ -38,7 +38,7 @@ class _SkeletonDemoPageState extends State<SkeletonDemoPage> {
                   items.clear();
                 });
               },
-              icon: Icon(Icons.clear))
+              icon: const Icon(Icons.clear))
         ],
       ),
       body: CustomScrollView(

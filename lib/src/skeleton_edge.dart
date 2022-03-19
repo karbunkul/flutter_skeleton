@@ -1,5 +1,5 @@
+import 'package:easy_skeleton/src/skeleton_group.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_skeleton/src/skeleton_group.dart';
 
 class SkeletonEdge extends StatelessWidget {
   final Widget child;

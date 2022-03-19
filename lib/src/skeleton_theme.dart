@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 class SkeletonTheme extends InheritedTheme {
   final SkeletonThemeData data;
 
-  SkeletonTheme({Key? key, required this.data, required Widget child})
-      : super(key: key, child: child);
+  const SkeletonTheme({
+    Key? key,
+    required this.data,
+    required Widget child,
+  }) : super(key: key, child: child);
 
   @override
   bool updateShouldNotify(SkeletonTheme oldWidget) => data != oldWidget.data;

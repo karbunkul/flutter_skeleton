@@ -9,7 +9,7 @@ class SkeletonScope extends InheritedWidget {
   final SkeletonBuilder? groupBuilder;
   final SkeletonViewMode viewMode;
 
-  SkeletonScope({
+  const SkeletonScope({
     required this.viewMode,
     Key? key,
     required Widget child,
@@ -26,7 +26,7 @@ class SkeletonScope extends InheritedWidget {
   }
 
   @override
-  bool updateShouldNotify(SkeletonScope old) {
+  bool updateShouldNotify(SkeletonScope oldWidget) {
     return true;
   }
 }

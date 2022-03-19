@@ -1,6 +1,6 @@
+import 'package:easy_skeleton/src/skeleton_scope.dart';
+import 'package:easy_skeleton/src/skeleton_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton/src/skeleton_scope.dart';
-import 'package:flutter_skeleton/src/skeleton_theme.dart';
 
 class SkeletonManager extends StatelessWidget {
   final Widget child;
@@ -10,15 +10,15 @@ class SkeletonManager extends StatelessWidget {
   final SkeletonBuilder? groupBuilder;
   final SkeletonViewMode? viewMode;
 
-  SkeletonManager({
-    Key? key,
+  const SkeletonManager({
     required this.child,
-    this.builder,
-    this.groupBuilder,
+    Key? key,
     this.theme,
     this.darkTheme,
+    this.builder,
+    this.groupBuilder,
     this.viewMode,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

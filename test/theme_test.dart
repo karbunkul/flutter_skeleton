@@ -1,5 +1,5 @@
+import 'package:easy_skeleton/easy_skeleton.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton/flutter_skeleton.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -14,7 +14,7 @@ void main() {
         expect(skeletonTheme.color != null, true);
         expect(skeletonTheme.radius == 8.0, true);
         expect(skeletonTheme.color == Theme.of(_).colorScheme.surface, true);
-        return Scaffold();
+        return const Scaffold();
       }),
     ));
   });

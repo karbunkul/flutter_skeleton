@@ -1,6 +1,6 @@
+import 'package:easy_skeleton/easy_skeleton.dart';
 import 'package:example/skeleton_demo_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_skeleton/flutter_skeleton.dart';
 
 class PersonItem extends StatelessWidget {
   final Person data;
@@ -17,7 +17,7 @@ class PersonItem extends StatelessWidget {
         shape: SkeletonShapeText(data.displayName, spacing: 8),
       ),
       subtitle: SkeletonEdge(
-        padding: EdgeInsets.only(top: 8),
+        padding: const EdgeInsets.only(top: 8),
         child: Skeleton.builder(
           builder: (context) => Text(data.jobTitle, style: textTheme.caption),
           shape: Padding(
@@ -27,8 +27,8 @@ class PersonItem extends StatelessWidget {
         ),
       ),
       trailing: Skeleton.builder(
-        builder: (context) => Text('отпуск'),
-        shape: SkeletonShapeText('отпуск', style: TextStyle()),
+        builder: (context) => const Text('отпуск'),
+        shape: const SkeletonShapeText('отпуск', style: TextStyle()),
       ),
       leading: Skeleton.builder(
         builder: (context) => CircleAvatar(child: Text(data.avatar)),
