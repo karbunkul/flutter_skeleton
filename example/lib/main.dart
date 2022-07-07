@@ -1,7 +1,6 @@
 import 'package:easy_skeleton/easy_skeleton.dart';
 import 'package:example/skeleton_demo_page.dart';
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,18 +18,18 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       builder: (_, child) {
         return SkeletonManager(
-          viewMode: SkeletonViewMode.hide,
+          viewMode: SkeletonViewMode.auto,
           theme: SkeletonThemeData(color: Colors.grey, radius: 4),
           // darkTheme: SkeletonThemeData(color: Colors.amber, radius: 4),
-          groupBuilder: (context, child) {
-            final color = SkeletonTheme.of(context).color;
-
-            return Shimmer.fromColors(
-              baseColor: color!,
-              highlightColor: color.withOpacity(0.8),
-              child: child,
-            );
-          },
+          // groupBuilder: (context, child) {
+          //   final color = SkeletonTheme.of(context).color;
+          //
+          //   return Shimmer.fromColors(
+          //     baseColor: color!,
+          //     highlightColor: color.withOpacity(0.8),
+          //     child: child,
+          //   );
+          // },
           child: child!,
         );
       },

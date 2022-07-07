@@ -14,7 +14,7 @@ class PersonItem extends StatelessWidget {
       dense: true,
       title: Skeleton.builder(
         builder: (context) => Text(data.displayName),
-        shape: SkeletonShapeText(data.displayName, spacing: 8),
+        shape: SkeletonShapeText('data.displayName', spacing: 8),
       ),
       subtitle: SkeletonEdge(
         padding: const EdgeInsets.only(top: 8),
@@ -22,7 +22,8 @@ class PersonItem extends StatelessWidget {
           builder: (context) => Text(data.jobTitle, style: textTheme.caption),
           shape: Padding(
             padding: const EdgeInsets.only(top: 4.0),
-            child: SkeletonShapeText(data.jobTitle, style: textTheme.caption!),
+            child:
+                SkeletonShapeText('data jobTitle', style: textTheme.caption!),
           ),
         ),
       ),

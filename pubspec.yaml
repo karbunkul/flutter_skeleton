@@ -1,6 +1,6 @@
 name: easy_skeleton
 description: Skeleton is easy.
-version: 0.9.2
+version: 0.9.3
 repository: https://github.com/karbunkul/flutter_skeleton
 
 environment:

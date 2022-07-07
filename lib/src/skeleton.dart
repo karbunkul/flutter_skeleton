@@ -1,6 +1,10 @@
-import 'package:easy_skeleton/src/skeleton_group.dart';
-import 'package:easy_skeleton/src/skeleton_scope.dart';
+import 'package:easy_skeleton/easy_skeleton.dart';
 import 'package:flutter/widgets.dart';
+
+typedef SkeletonTextBuilder = Widget Function(
+  BuildContext context,
+  String data,
+);
 
 class Skeleton extends StatelessWidget {
   final Widget child;
@@ -54,5 +58,29 @@ class Skeleton extends StatelessWidget {
   }) {
     final child = Builder(builder: builder);
     return Skeleton(shape: shape, skeleton: skeleton, child: child);
+  }
+
+  factory Skeleton.text(
+    String data, {
+    // skeleton text placeholder
+    String? skeletonText,
+    SkeletonTextBuilder? textBuilder,
+    TextStyle? style,
+    TextAlign? textAlign,
+    bool? skeleton,
+  }) {
+    Widget child = Text(data, style: style, textAlign: textAlign);
+
+    if (textBuilder != null) {
+      child = Builder(builder: (context) {
+        return textBuilder.call(context, data);
+      });
+    }
+
+    return Skeleton(
+      child: child,
+      skeleton: skeleton,
+      shape: SkeletonShapeText(skeletonText ?? data, style: style),
+    );
   }
 }
