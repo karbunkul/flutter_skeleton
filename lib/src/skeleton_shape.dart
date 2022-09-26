@@ -76,10 +76,12 @@ class _SkeletonShapePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()..color = color;
-    final clampedWidth =
-        this.size.width.clamp(this.size.width, constraints.maxWidth);
-    final clampedHeight =
-        this.size.height.clamp(this.size.width, constraints.maxHeight);
+    final clampedWidth = this.size.width > constraints.maxWidth
+        ? constraints.maxWidth
+        : this.size.width;
+    final clampedHeight = this.size.height > constraints.maxHeight
+        ? constraints.maxHeight
+        : this.size.height;
     final rect = Rect.fromLTWH(0, 0, clampedWidth, clampedHeight);
     canvas
       ..clipRRect(RRect.fromRectAndRadius(rect, Radius.circular(radius)))
