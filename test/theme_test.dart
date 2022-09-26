@@ -9,11 +9,12 @@ void main() {
     var themeData = ThemeData.light();
     await tester.pumpWidget(MaterialApp(
       theme: themeData,
-      home: Builder(builder: (_) {
-        var skeletonTheme = SkeletonTheme.of(_);
+      home: Builder(builder: (context) {
+        var skeletonTheme = SkeletonTheme.of(context);
         expect(skeletonTheme.color != null, true);
         expect(skeletonTheme.radius == 8.0, true);
-        expect(skeletonTheme.color == Theme.of(_).colorScheme.surface, true);
+        expect(
+            skeletonTheme.color == Theme.of(context).colorScheme.surface, true);
         return const Scaffold();
       }),
     ));

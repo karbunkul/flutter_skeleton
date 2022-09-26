@@ -6,5 +6,4 @@ export 'package:easy_skeleton/src/skeleton_group.dart';
 export 'package:easy_skeleton/src/skeleton_manager.dart';
 export 'package:easy_skeleton/src/skeleton_scope.dart';
 export 'package:easy_skeleton/src/skeleton_shape.dart';
-export 'package:easy_skeleton/src/skeleton_shape_text.dart';
 export 'package:easy_skeleton/src/skeleton_theme.dart';
