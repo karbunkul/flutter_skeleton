@@ -78,9 +78,9 @@ class Skeleton extends StatelessWidget {
     }
 
     return Skeleton(
-      child: child,
       skeleton: skeleton,
-      shape: SkeletonShapeText(skeletonText ?? data, style: style),
+      shape: SkeletonShape.text(skeletonText ?? data, style: style),
+      child: child,
     );
   }
 }

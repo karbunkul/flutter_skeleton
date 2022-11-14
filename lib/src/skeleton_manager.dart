@@ -36,9 +36,9 @@ class SkeletonManager extends StatelessWidget {
   SkeletonThemeData _themeData(BuildContext context) {
     var brightness = Theme.of(context).brightness;
     var skeletonTheme = SkeletonTheme.of(context);
-    var _theme = brightness == Brightness.light ? theme : darkTheme;
-    _theme ??= theme ?? darkTheme;
+    var selectedTheme = brightness == Brightness.light ? theme : darkTheme;
+    selectedTheme ??= theme ?? darkTheme;
 
-    return _theme ?? skeletonTheme.copyWith(radius: 8.0);
+    return selectedTheme ?? skeletonTheme.copyWith(radius: 8.0);
   }
 }

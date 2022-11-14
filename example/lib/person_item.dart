@@ -14,7 +14,7 @@ class PersonItem extends StatelessWidget {
       dense: true,
       title: Skeleton.builder(
         builder: (context) => Text(data.displayName),
-        shape: SkeletonShapeText('data.displayName', spacing: 8),
+        shape: const SkeletonShape.text('data.displayName', spacing: 8),
       ),
       subtitle: SkeletonEdge(
         padding: const EdgeInsets.only(top: 8),
@@ -23,17 +23,17 @@ class PersonItem extends StatelessWidget {
           shape: Padding(
             padding: const EdgeInsets.only(top: 4.0),
             child:
-                SkeletonShapeText('data jobTitle', style: textTheme.caption!),
+                SkeletonShape.text('data jobTitle', style: textTheme.caption!),
           ),
         ),
       ),
       trailing: Skeleton.builder(
         builder: (context) => const Text('отпуск'),
-        shape: const SkeletonShapeText('отпуск', style: TextStyle()),
+        shape: const SkeletonShape.text('отпуск', style: TextStyle()),
       ),
       leading: Skeleton.builder(
         builder: (context) => CircleAvatar(child: Text(data.avatar)),
-        shape: SkeletonShape.circle(40),
+        shape: const SkeletonShape.circle(40),
       ),
     );
   }

@@ -1,6 +1,6 @@
 name: easy_skeleton
 description: Skeleton is easy.
-version: 0.9.3
+version: 0.10.1
 repository: https://github.com/karbunkul/flutter_skeleton
 
 environment:
@@ -10,9 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_lints: ^1.0.4
+  flutter_lints: ^2.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mocktail: any
+  mocktail: ^0.3.0
