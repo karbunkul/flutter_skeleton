@@ -1,3 +1,8 @@
+## 0.10.2
+
+* Update SDK's
+* Migrate to new TextTheme
+
 ## 0.10.1
 
 * Add general widget for SkeletonShape:
