@@ -12,13 +12,13 @@ class SkeletonManager extends StatelessWidget {
 
   const SkeletonManager({
     required this.child,
-    Key? key,
+    super.key,
     this.theme,
     this.darkTheme,
     this.builder,
     this.groupBuilder,
     this.viewMode,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

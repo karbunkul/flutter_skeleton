@@ -38,8 +38,7 @@ class _Shape extends StatelessWidget {
     required this.height,
     required this.color,
     required this.radius,
-    Key? key,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -100,27 +99,25 @@ class _SkeletonShapeRect extends StatelessWidget implements SkeletonShape {
   final double? radius;
 
   const _SkeletonShapeRect({
-    Key? key,
+    super.key,
     required this.width,
     required this.height,
     this.radius,
-  }) : super(key: key);
+  });
 
   const _SkeletonShapeRect.circle(
     double side, {
-    Key? key,
+    super.key,
   })  : width = side,
         height = side,
-        radius = side,
-        super(key: key);
+        radius = side;
 
   const _SkeletonShapeRect.square(
     double side, {
     this.radius,
-    Key? key,
+    super.key,
   })  : width = side,
-        height = side,
-        super(key: key);
+        height = side;
 
   @override
   Widget build(BuildContext context) {
@@ -172,8 +169,8 @@ class _SkeletonShapeText extends StatelessWidget implements SkeletonShape {
     this.maxLines = 1,
     this.spacing = 4,
     this.textDirection,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   TextStyle get _style => style ?? const TextStyle();
 

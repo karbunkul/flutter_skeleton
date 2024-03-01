@@ -14,9 +14,9 @@ class Skeleton extends StatelessWidget {
   const Skeleton({
     required this.child,
     required this.shape,
-    Key? key,
+    super.key,
     this.skeleton,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

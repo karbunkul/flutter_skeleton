@@ -8,10 +8,10 @@ class SkeletonEdge extends StatelessWidget {
 
   const SkeletonEdge({
     required this.child,
-    Key? key,
+    super.key,
     this.padding,
     this.margin,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

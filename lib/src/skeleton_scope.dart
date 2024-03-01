@@ -11,11 +11,11 @@ class SkeletonScope extends InheritedWidget {
 
   const SkeletonScope({
     required this.viewMode,
-    Key? key,
-    required Widget child,
+    super.key,
+    required super.child,
     this.builder,
     this.groupBuilder,
-  }) : super(key: key, child: child);
+  });
 
   static SkeletonScope? maybeOf(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<SkeletonScope>();
