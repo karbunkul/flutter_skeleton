@@ -19,11 +19,13 @@ class PersonItem extends StatelessWidget {
       subtitle: SkeletonEdge(
         padding: const EdgeInsets.only(top: 8),
         child: Skeleton.builder(
-          builder: (context) => Text(data.jobTitle, style: textTheme.caption),
+          builder: (context) => Text(data.jobTitle, style: textTheme.bodySmall),
           shape: Padding(
             padding: const EdgeInsets.only(top: 4.0),
-            child:
-                SkeletonShape.text('data jobTitle', style: textTheme.caption!),
+            child: SkeletonShape.text(
+              'data jobTitle',
+              style: textTheme.bodySmall!,
+            ),
           ),
         ),
       ),

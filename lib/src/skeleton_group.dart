@@ -6,10 +6,10 @@ class SkeletonGroup extends StatelessWidget {
   final bool skeleton;
 
   const SkeletonGroup({
-    Key? key,
+    super.key,
     required this.builder,
     required this.skeleton,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -5,10 +5,10 @@ class SkeletonTheme extends InheritedTheme {
   final SkeletonThemeData data;
 
   const SkeletonTheme({
-    Key? key,
+    super.key,
     required this.data,
-    required Widget child,
-  }) : super(key: key, child: child);
+    required super.child,
+  });
 
   @override
   bool updateShouldNotify(SkeletonTheme oldWidget) => data != oldWidget.data;
